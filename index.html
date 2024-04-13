@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-body {
-background-color: #f0f0f0;
-}
+  <style>
+    :root {
+      --bg-color: #f0f0f0;
+      --text-color: #333;
+      --button-color: #008CBA;
+    }
 
-header {
-background-color: #333;
-padding: 20px;
-text-align: center;
-}
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
 
-header button {
-background-color: #008CBA;
-border: none;
-color: white;
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 4px 2px;
-cursor: pointer;
-}
+    header {
+      background-color: var(--text-color);
+      padding: 20px;
+      text-align: center;
+    }
 
-section {
-float: left;
-width: 30%;
-padding: 20px;
-height: 300px; /* Should be removed. Only for demonstration */
-}
+    header button {
+      background-color: var(--button-color);
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
 
-/* Clear floats after the columns */
-section:after {
-content: "";
-display: table;
-clear: both;
-}
+    section {
+      float: left;
+      width: 30%;
+      padding: 20px;
+    }
 
-footer {
-background-color: #333;
-color: white;
-text-align: center;
-padding: 10px;
-}
+    /* Clear floats after the columns */
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-section {
-width: 100%;
-}
-}
-</style>
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      section {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<h1>Apple</h1>
-<button>Home</button>
-<button>Products</button>
-<button>About</button>
-</header>
+  <header>
+    <h1>Apple</h1>
+    <button>Home</button>
+    <button>Products</button>
+    <button>About</button>
+  </header>
 
-<section>
-<h2>iPhone</h2>
-<img src="https://www.apple.com/v/iphone-13-pro/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPhone">
-<p>The iPhone is a line of smartphones designed and marketed by Apple Inc.</p>
-</section>
+  <section>
+    <h2>iPhone</h2>
+    <img src="https://www.apple.com/v/iphone-13-pro/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPhone">
+    <p>The iPhone is a line of smartphones designed and marketed by Apple Inc.</p>
+  </section>
 
-<section>
-<h2>iPad</h2>
-<img src="https://www.apple.com/v/ipad-air/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPad">
-<p>The iPad is a line of tablet computers designed, developed and marketed by Apple Inc.</p>
-</section>
+  <section>
+    <h2>iPad</h2>
+    <img src="https://www.apple.com/v/ipad-air/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPad">
+    <p>The iPad is a line of tablet computers designed, developed and marketed by Apple Inc.</p>
+  </section>
 
-<footer>
-<p>Copyright &copy; 2023 Apple</p>
-</footer>
+  <footer>
+    <p>Copyright &copy; 2023 Apple</p>
+  </footer>
 
 </body>
-</html>
 
-<script>
-// JavaScript code here
-</script>
+</html>
