@@ -1,68 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+  <meta charset="UTF-8">
+
+  <title>Apple - Homepage</title>
+
   <style>
     :root {
-      --bg-color: #f0f0f0;
-      --text-color: #333;
-      --button-color: #008CBA;
+      /* Define colors and breakpoints as variables */
+      --primary-color: #333;
+      --secondary-color: #008CBA;
+      --breakpoint: 600px;
     }
 
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background-color: #f0f0f0;
+      color: var(--primary-color);
     }
 
     header {
-      background-color: var(--text-color);
+      background-color: var(--primary-color);
       padding: 20px;
       text-align: center;
     }
 
-    header button {
-      background-color: var(--button-color);
+    button {
+      background-color: var(--secondary-color);
       border: none;
       color: white;
       padding: 15px 32px;
       text-align: center;
-      text-decoration: none;
-      display: inline-block;
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
     }
 
-    section {
-      float: left;
-      width: 30%;
-      padding: 20px;
+    /* Use semantic grid for layout */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
     }
 
-    /* Clear floats after the columns */
-    section:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media (max-width: 600px) {
-      section {
-        width: 100%;
+    @media (max-width: var(--breakpoint)) {
+      .container {
+        grid-template-columns: 1fr;
       }
     }
   </style>
+
 </head>
 
 <body>
+
 
   <header>
     <h1>Apple</h1>
@@ -71,22 +63,25 @@
     <button>About</button>
   </header>
 
-  <section>
-    <h2>iPhone</h2>
-    <img src="https://www.apple.com/v/iphone-13-pro/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPhone">
-    <p>The iPhone is a line of smartphones designed and marketed by Apple Inc.</p>
-  </section>
+  <main class="container">
 
-  <section>
-    <h2>iPad</h2>
-    <img src="https://www.apple.com/v/ipad-air/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPad">
-    <p>The iPad is a line of tablet computers designed, developed and marketed by Apple Inc.</p>
-  </section>
+    <section>
+      <h2>iPhone</h2>
+      <img src="https://www.apple.com/v/iphone-13-pro/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPhone">
+      <p>The iPhone is a line of smartphones designed and marketed by Apple Inc.</p>
+    </section>
+
+    <section>
+      <h2>iPad</h2>
+      <img src="https://www.apple.com/v/ipad-air/d/images/overview/hero/hero__dsyj5y9ydyz3_large.jpg" alt="iPad">
+      <p>The iPad is a line of tablet computers designed, developed and marketed by Apple Inc.</p>
+    </section>
+
+  </main>
 
   <footer>
     <p>Copyright &copy; 2023 Apple</p>
   </footer>
-
 </body>
 
 </html>
